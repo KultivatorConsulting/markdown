@@ -13,6 +13,7 @@ import 'inline_syntaxes/emphasis_syntax.dart';
 import 'inline_syntaxes/escape_syntax.dart';
 import 'inline_syntaxes/image_syntax.dart';
 import 'inline_syntaxes/inline_syntax.dart';
+import 'inline_syntaxes/italic_syntax.dart';
 import 'inline_syntaxes/line_break_syntax.dart';
 import 'inline_syntaxes/link_syntax.dart';
 import 'inline_syntaxes/text_syntax.dart';
@@ -31,10 +32,10 @@ class InlineParser {
     TextSyntax(r' \* ', startCharacter: $space),
     // "_" surrounded by spaces is left alone.
     TextSyntax(' _ ', startCharacter: $space),
-    // Parse "**strong**" and "*emphasis*" tags.
+    // Parse "*strong*" tag.
     EmphasisSyntax.asterisk(),
-    // Parse "__strong__" and "_emphasis_" tags.
-    EmphasisSyntax.underscore(),
+    // Parse "_italic_" tag.
+    ItalicSyntax(),
     CodeSyntax(),
     // We will add the LinkSyntax once we know about the specific link resolver.
   ]);

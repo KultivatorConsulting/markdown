@@ -18,7 +18,7 @@ class HeaderSyntax extends BlockSyntax {
   Node parse(BlockParser parser) {
     final match = pattern.firstMatch(parser.current)!;
     parser.advance();
-    final level = match[1]!.length;
+    final level = match[1]![1];
     final contents = UnparsedContent(match[2]!.trim());
     return Element('h$level', [contents]);
   }

@@ -47,6 +47,7 @@ abstract class ListSyntax extends BlockSyntax {
 
   @override
   Node parse(BlockParser parser) {
+    var _index = 1;
     final items = <ListItem>[];
     var childLines = <String>[];
 
@@ -92,8 +93,10 @@ abstract class ListSyntax extends BlockSyntax {
       } else if (tryMatch(ulPattern) || tryMatch(olPattern)) {
         final precedingWhitespace = match![1]!;
         final digits = match![2] ?? '';
-        if (startNumber == null && digits.isNotEmpty) {
-          startNumber = int.parse(digits);
+        if (startNumber == null) {
+          // startNumber = int.parse(digits);
+          startNumber = _index;
+          _index++;
         }
         final marker = match![3]!;
         final firstWhitespace = match![5] ?? '';

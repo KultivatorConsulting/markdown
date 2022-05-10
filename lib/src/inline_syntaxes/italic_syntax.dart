@@ -4,13 +4,15 @@
 
 import 'delimiter_syntax.dart';
 
-/// Matches strikethrough syntax according to the GFM spec.
-class StrikethroughSyntax extends DelimiterSyntax {
-  StrikethroughSyntax()
+class ItalicSyntax extends DelimiterSyntax {
+  //_italic_
+ ItalicSyntax()
       : super(
-          '-',
+          r'\_+',
           requiresDelimiterRun: true,
           allowIntraWord: true,
-          tags: [DelimiterTag('del', 1)],
+          tags: _tags,
         );
+
+  static final _tags = [DelimiterTag('em', 1)];
 }

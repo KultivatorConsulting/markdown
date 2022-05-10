@@ -12,7 +12,9 @@ final setextPattern = RegExp(r'^[ ]{0,3}(=+|-+)\s*$');
 ///
 /// Starts with 1-6 unescaped `#` characters which must not be followed by a
 /// non-space character. Line may end with any number of `#` characters,.
-final headerPattern = RegExp(r'^ {0,3}(#{1,6})[ \x09\x0b\x0c](.*?)#*$');
+// final headerPattern = RegExp(r'^ {0,3}(#{1,6})[ \x09\x0b\x0c](.*?)#*$');
+//h1. Header 1, support h1 to h6
+final headerPattern = RegExp(r'^ {0,3}(h[0-6]+.)[ \x09\x0b\x0c](.*?)#*$');
 
 /// The line starts with `>` with one optional space after.
 final blockquotePattern = RegExp(r'^[ ]{0,3}>[ ]?(.*)$');
@@ -38,11 +40,12 @@ final hrPattern = RegExp(r'^ {0,3}([-*_])[ \t]*\1[ \t]*\1(?:\1|[ \t])*$');
 /// Contains a dummy group at [2], so that the groups in [ulPattern] and
 /// [olPattern] match up; in both, [2] is the length of the number that begins
 /// the list marker.
-final ulPattern = RegExp(r'^([ ]{0,3})()([*+-])(([ \t])([ \t]*)(.*))?$');
+final ulPattern = RegExp(r'^([ ]{0,3})()([*+])(([ \t])([ \t]*)(.*))?$');
 
 /// A line starting with a number like `123.`. May have up to three leading
 /// spaces before the marker and any number of spaces or tabs after.
-final olPattern = RegExp(r'^([ ]{0,3})(\d{1,9})([\.)])(([ \t])([ \t]*)(.*))?$');
+// final olPattern = RegExp(r'^([ ]{0,3})(\d{1,9})([\.)])(([ \t])([ \t]*)(.*))?$');
+final olPattern = RegExp(r'^([ ]{0,3})()([#+])(([ \t])([ \t]*)(.*))?$');
 
 /// A line of hyphens separated by at least one pipe.
 final tablePattern = RegExp(
