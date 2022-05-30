@@ -23,11 +23,11 @@ import 'inline_syntaxes/text_syntax.dart';
 class InlineParser {
   static final List<InlineSyntax> _defaultSyntaxes =
       List<InlineSyntax>.unmodifiable(<InlineSyntax>[
-    EmailAutolinkSyntax(),
-    AutolinkSyntax(),
+    // EmailAutolinkSyntax(),
+    // AutolinkSyntax(),
     LineBreakSyntax(),
     // Allow any punctuation to be escaped.
-    EscapeSyntax(),
+    // EscapeSyntax(),
     // "*" surrounded by spaces is left alone.
     TextSyntax(r' \* ', startCharacter: $space),
     // "_" surrounded by spaces is left alone.
@@ -36,7 +36,7 @@ class InlineParser {
     EmphasisSyntax.asterisk(),
     // Parse "_italic_" tag.
     ItalicSyntax(),
-    CodeSyntax(),
+    // CodeSyntax(),
     // We will add the LinkSyntax once we know about the specific link resolver.
   ]);
 

@@ -73,8 +73,8 @@ class ExtensionSet {
   static final ExtensionSet gitHubFlavored = ExtensionSet(
     List<BlockSyntax>.unmodifiable(
       <BlockSyntax>[
-        const FencedCodeBlockSyntax(),
-        const TableSyntax(),
+        // const FencedCodeBlockSyntax(),
+        // const TableSyntax(),
       ],
     ),
     List<InlineSyntax>.unmodifiable(

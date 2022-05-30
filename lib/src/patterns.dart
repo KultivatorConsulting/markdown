@@ -54,3 +54,5 @@ final tablePattern = RegExp(
 /// A pattern which should never be used. It just satisfies non-nullability of
 /// pattern fields.
 final dummyPattern = RegExp('');
+
+final jiraImagePattern = RegExp(r'^ {0,2}(!image-)(.*?)#*$');

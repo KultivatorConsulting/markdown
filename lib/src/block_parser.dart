@@ -11,6 +11,7 @@ import 'block_syntaxes/dummy_block_syntax.dart';
 import 'block_syntaxes/empty_block_syntax.dart';
 import 'block_syntaxes/header_syntax.dart';
 import 'block_syntaxes/horizontal_rule_syntax.dart';
+import 'block_syntaxes/jira_image_syntax.dart';
 import 'block_syntaxes/long_block_html_syntax.dart';
 import 'block_syntaxes/ordered_list_syntax.dart';
 import 'block_syntaxes/other_tag_block_html_syntax.dart';
@@ -54,12 +55,13 @@ class BlockParser {
     // const OtherTagBlockHtmlSyntax(),
     // const SetextHeaderSyntax(),
     const HeaderSyntax(),
+    const JiraImageSyntax(),
     // const CodeBlockSyntax(),
     // const BlockquoteSyntax(),
     // const HorizontalRuleSyntax(),
     const UnorderedListSyntax(),
     const OrderedListSyntax(),
-    const ParagraphSyntax()
+    const ParagraphSyntax(),
   ];
 
   BlockParser(this.lines, this.document) {
