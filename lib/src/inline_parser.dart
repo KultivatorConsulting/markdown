@@ -2,6 +2,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'package:markdown/src/inline_syntaxes/jira_underline_syntax.dart';
+
 import 'ast.dart';
 import 'charcode.dart';
 import 'document.dart';
@@ -14,6 +16,7 @@ import 'inline_syntaxes/escape_syntax.dart';
 import 'inline_syntaxes/image_syntax.dart';
 import 'inline_syntaxes/inline_syntax.dart';
 import 'inline_syntaxes/italic_syntax.dart';
+import 'inline_syntaxes/jira_code_syntax.dart';
 import 'inline_syntaxes/line_break_syntax.dart';
 import 'inline_syntaxes/link_syntax.dart';
 import 'inline_syntaxes/text_syntax.dart';
@@ -36,7 +39,8 @@ class InlineParser {
     EmphasisSyntax.asterisk(),
     // Parse "_italic_" tag.
     ItalicSyntax(),
-    // CodeSyntax(),
+    JiraUnderlineSyntax(),
+    JiraCodeSyntax(),
     // We will add the LinkSyntax once we know about the specific link resolver.
   ]);
 

@@ -14,7 +14,7 @@ final setextPattern = RegExp(r'^[ ]{0,3}(=+|-+)\s*$');
 /// non-space character. Line may end with any number of `#` characters,.
 // final headerPattern = RegExp(r'^ {0,3}(#{1,6})[ \x09\x0b\x0c](.*?)#*$');
 //h1. Header 1, support h1 to h6
-final headerPattern = RegExp(r'^ {0,3}(h[0-6]+.)[ \x09\x0b\x0c](.*?)#*$');
+final headerPattern = RegExp(r'^ {0,3}(h[0-6]+.)[ \x09\x0b\x0c](.*?)$');
 
 /// The line starts with `>` with one optional space after.
 final blockquotePattern = RegExp(r'^[ ]{0,3}>[ ]?(.*)$');
@@ -55,4 +55,5 @@ final tablePattern = RegExp(
 /// pattern fields.
 final dummyPattern = RegExp('');
 
-final jiraImagePattern = RegExp(r'^ {0,2}(!image-)(.*?)#*$');
+//final jiraImagePattern = RegExp(r'^ {0,2}(!image-)(.*?)#*$');
+final jiraImagePattern = RegExp(r'^ {0,3}(!image-)(.*?)(!)$');

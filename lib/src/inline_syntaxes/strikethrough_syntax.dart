@@ -8,7 +8,7 @@ import 'delimiter_syntax.dart';
 class StrikethroughSyntax extends DelimiterSyntax {
   StrikethroughSyntax()
       : super(
-          '-',
+           r'\-+',
           requiresDelimiterRun: true,
           allowIntraWord: true,
           tags: [DelimiterTag('del', 1)],
