@@ -17,6 +17,8 @@ import 'inline_syntaxes/image_syntax.dart';
 import 'inline_syntaxes/inline_syntax.dart';
 import 'inline_syntaxes/italic_syntax.dart';
 import 'inline_syntaxes/jira_code_syntax.dart';
+import 'inline_syntaxes/jira_subscrtipt_syntax.dart';
+import 'inline_syntaxes/jira_superscript_syntax.dart';
 import 'inline_syntaxes/line_break_syntax.dart';
 import 'inline_syntaxes/link_syntax.dart';
 import 'inline_syntaxes/text_syntax.dart';
@@ -40,6 +42,8 @@ class InlineParser {
     // Parse "_italic_" tag.
     ItalicSyntax(),
     JiraUnderlineSyntax(),
+    JiraSubscriptSyntax(),
+    JiraSuperscriptSyntax(),
     JiraCodeSyntax(),
     // We will add the LinkSyntax once we know about the specific link resolver.
   ]);
