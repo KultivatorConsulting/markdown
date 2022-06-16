@@ -18,6 +18,7 @@ import 'inline_syntaxes/inline_syntax.dart';
 import 'inline_syntaxes/italic_syntax.dart';
 import 'inline_syntaxes/jira_code_syntax.dart';
 import 'inline_syntaxes/jira_colored_text_syntax.dart';
+import 'inline_syntaxes/jira_link_syntax.dart';
 import 'inline_syntaxes/jira_subscrtipt_syntax.dart';
 import 'inline_syntaxes/jira_superscript_syntax.dart';
 import 'inline_syntaxes/line_break_syntax.dart';
@@ -47,6 +48,7 @@ class InlineParser {
     JiraSuperscriptSyntax(),
     JiraCodeSyntax(),
     JiraColoredTextSyntax(),
+    JiraLinkSyntax(),
     // We will add the LinkSyntax once we know about the specific link resolver.
   ]);
 
@@ -103,8 +105,8 @@ class InlineParser {
     if (document.withDefaultInlineSyntaxes) {
       // Custom link resolvers go after the generic text syntax.
       syntaxes.addAll([
-        LinkSyntax(linkResolver: document.linkResolver),
-        ImageSyntax(linkResolver: document.imageLinkResolver)
+        // LinkSyntax(linkResolver: document.linkResolver),
+        // ImageSyntax(linkResolver: document.imageLinkResolver)
       ]);
 
       syntaxes.addAll(_defaultSyntaxes);
