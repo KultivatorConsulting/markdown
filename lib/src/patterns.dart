@@ -57,3 +57,7 @@ final dummyPattern = RegExp('');
 
 //final jiraImagePattern = RegExp(r'^ {0,2}(!image-)(.*?)#*$');
 final jiraImagePattern = RegExp(r'^ {0,3}(!image-)(.*?)(!)$');
+
+final jiraTablePattern = RegExp(r'^ {0,3}(\|\|?).+(\|\|?)');
+
+

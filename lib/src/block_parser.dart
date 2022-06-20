@@ -2,6 +2,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'package:markdown/src/block_syntaxes/jira_table_syntax.dart';
+
 import 'ast.dart';
 import 'block_syntaxes/block_syntax.dart';
 import 'block_syntaxes/block_tag_block_html_syntax.dart';
@@ -56,6 +58,7 @@ class BlockParser {
     // const SetextHeaderSyntax(),
     const HeaderSyntax(),
     const JiraImageSyntax(),
+    const JiraTableSyntax(),
     // const CodeBlockSyntax(),
     // const BlockquoteSyntax(),
     // const HorizontalRuleSyntax(),
