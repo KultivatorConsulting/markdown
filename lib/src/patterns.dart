@@ -61,3 +61,5 @@ final jiraImagePattern = RegExp(r'^ {0,3}(!image-)(.*?)(!)$');
 final jiraTablePattern = RegExp(r'^ {0,3}(\|\|?).+(\|\|?)');
 
 final jiraCodeBlockPattern = RegExp(r'^[ ]{0,3}(.*)({noformat})(.*)$');
+
+final jiraQuotePattern = RegExp(r'^[ ]{0,3}(.*)({quote})(.*)$');
