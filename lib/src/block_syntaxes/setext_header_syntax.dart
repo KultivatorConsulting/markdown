@@ -61,10 +61,10 @@ class SetextHeaderSyntax extends BlockSyntax {
 
   bool _interperableAsParagraph(String line) =>
       !(indentPattern.hasMatch(line) ||
-          codeFencePattern.hasMatch(line) ||
+          jiraCodeBlockPattern.hasMatch(line) ||
           headerPattern.hasMatch(line) ||
-          blockquotePattern.hasMatch(line) ||
-          hrPattern.hasMatch(line) ||
+          jiraQuotePattern.hasMatch(line) ||
+          jiraDividerPattern.hasMatch(line) ||
           ulPattern.hasMatch(line) ||
           olPattern.hasMatch(line) ||
           emptyPattern.hasMatch(line));

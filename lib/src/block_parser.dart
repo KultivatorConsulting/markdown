@@ -2,6 +2,7 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'package:markdown/src/block_syntaxes/jira_divider_syntax.dart';
 import 'package:markdown/src/block_syntaxes/jira_table_syntax.dart';
 
 import 'ast.dart';
@@ -59,6 +60,7 @@ class BlockParser {
     // const OtherTagBlockHtmlSyntax(),
     // const SetextHeaderSyntax(),
     const HeaderSyntax(),
+    const JiraDividerSyntax(),
     const JiraImageSyntax(),
     const JiraTableSyntax(),
     const JiraCodeBlockSyntax(),
