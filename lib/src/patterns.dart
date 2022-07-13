@@ -65,3 +65,5 @@ final jiraCodeBlockPattern = RegExp(r'^[ ]{0,3}(.*)({noformat})(.*)$');
 final jiraQuotePattern = RegExp(r'^[ ]{0,3}(.*)({quote})(.*)$');
 
 final jiraDividerPattern = RegExp('----');
+
+final jiraInfoPanelPattern = RegExp('^[ ]{0,3}({panel)(.*)(})');

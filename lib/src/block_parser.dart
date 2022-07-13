@@ -17,6 +17,7 @@ import 'block_syntaxes/horizontal_rule_syntax.dart';
 import 'block_syntaxes/jira_blockquote_syntax.dart';
 import 'block_syntaxes/jira_code_block_syntax.dart';
 import 'block_syntaxes/jira_image_syntax.dart';
+import 'block_syntaxes/jira_info_panel_syntax.dart';
 import 'block_syntaxes/long_block_html_syntax.dart';
 import 'block_syntaxes/ordered_list_syntax.dart';
 import 'block_syntaxes/other_tag_block_html_syntax.dart';
@@ -70,6 +71,7 @@ class BlockParser {
     // const HorizontalRuleSyntax(),
     const UnorderedListSyntax(),
     const OrderedListSyntax(),
+    const JiraInfoPanelSyntax(),
     const ParagraphSyntax(),
   ];
 
